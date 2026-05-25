@@ -1,0 +1,17 @@
+[package]
+name = "lockwatch"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "lockwatch"
+path = "src/main.rs"
+
+[[bin]]
+name = "lock_holder"
+path = "tests/support/lock_holder.rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+nix = { version = "0.27", features = ["fs"] }
